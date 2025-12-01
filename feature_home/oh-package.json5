@@ -1,0 +1,11 @@
+{
+  "name": "feature_home",
+  "version": "1.0.0",
+  "description": "Please describe the basic information.",
+  "main": "Index.ets",
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "feature_store": "file:../feature_store"
+  }
+}

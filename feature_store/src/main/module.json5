@@ -1,0 +1,9 @@
+{
+  "module": {
+    "name": "feature_store",
+    "type": "har",
+    "deviceTypes": [
+      "wearable"
+    ]
+  }
+}

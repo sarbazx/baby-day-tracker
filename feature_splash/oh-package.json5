@@ -1,0 +1,12 @@
+{
+  "name": "feature_splash",
+  "version": "1.0.0",
+  "description": "Please describe the basic information.",
+  "main": "Index.ets",
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "@ohos/lottie-turbo": "^1.0.2"
+  }
+}
+

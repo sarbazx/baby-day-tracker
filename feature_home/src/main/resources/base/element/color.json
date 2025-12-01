@@ -1,0 +1,36 @@
+{
+  "color": [
+    {
+      "name": "start_window_background",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "background_color",
+      "value": "#403d39"
+    },
+    {
+      "name": "background_border_color",
+      "value": "#FF696932"
+    },
+    {
+      "name": "primary_color",
+      "value": "#252422"
+    },
+    {
+      "name": "on_primary_color",
+      "value": "#fffcf2"
+    },
+    {
+      "name": "brand_color",
+      "value": "#FFEB9D28"
+    },
+    {
+      "name": "brand_border_color",
+      "value": "#FFFFD53E"
+    },
+    {
+      "name": "on_brand_color",
+      "value": "#E6A1E3BE"
+    }
+  ]
+}

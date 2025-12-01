@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "FeatureSplashAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "FeatureSplashAbility_label",
+      "value": "label"
+    }
+  ]
+}

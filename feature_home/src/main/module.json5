@@ -1,0 +1,10 @@
+{
+  "module": {
+    "name": "feature_home",
+    "type": "har",
+    "description": "$string:module_desc",
+    "deviceTypes": [
+      "wearable"
+    ],
+  }
+}

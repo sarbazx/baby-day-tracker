@@ -1,0 +1,9 @@
+{
+  "routerMap": [
+    {
+      "name": "SplashPage",
+      "pageSourceFile": "src/main/ets/SplashPage.ets",
+      "buildFunction": "SplashPageBuilder"
+    }
+  ]
+}
