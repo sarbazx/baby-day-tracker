@@ -27,7 +27,7 @@ export struct AddBabyLogPage {
               this.pageStack.pop({ result: true })
             })
           }
-        },
+        }
       })
     } catch (err) {
       console.error(`[BabyDayTracker] requestEnableNotification failed, code is ${err.code}, message is ${err.message}`);

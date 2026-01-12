@@ -9,7 +9,7 @@ export struct Loader {
       LottieView({
         lottieId: 'loader',
         path: $rawfile('loading.json'),
-        controller: this.controller,
+        controller: this.controller
       })
         .width('100%')
         .height('100%')

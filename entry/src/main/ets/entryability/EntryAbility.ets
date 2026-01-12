@@ -31,8 +31,8 @@ export default class EntryAbility extends UIAbility {
         hilog.error(DOMAIN, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err));
         return;
       }
-      let GlobalContent = GlobalContext.getInstance();
-      GlobalContent.saveContext(this.context.getApplicationContext());
+      let globalContent = GlobalContext.getInstance();
+      globalContent.saveContext(this.context.getApplicationContext());
       hilog.info(DOMAIN, 'testTag', 'Succeeded in loading the content.');
     });
   }

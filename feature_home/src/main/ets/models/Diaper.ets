@@ -1,4 +1,4 @@
-import { formatDate } from "../lib/date-utils";
+import { formatDate } from '../lib/date-utils';
 
 export enum DiaperType {
   pee,

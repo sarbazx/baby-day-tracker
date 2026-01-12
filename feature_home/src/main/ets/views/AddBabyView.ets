@@ -56,7 +56,7 @@ export struct AddBabyView {
               this.pageStack.pop({ result: true })
             }
           })
-        },
+        }
       })
     } catch (err) {
       console.error(`[BabyDayTracker] requestEnableNotification failed, code is ${err.code}, message is ${err.message}`);
@@ -110,7 +110,7 @@ export struct AddBabyView {
             currentIndex: this.selectedYearIndex,
             options: this.yearOptions,
             label: 'Year',
-            onClick: (index) => this.selectedYearIndex = index,
+            onClick: (index) => this.selectedYearIndex = index
           })
           BabyBirthSelect({
             currentIndex: this.selectedMonthIndex,
@@ -119,13 +119,13 @@ export struct AddBabyView {
             onClick: (index) => {
               this.selectedMonthIndex = index;
               this.daysInit();
-            },
+            }
           })
           BabyBirthSelect({
             currentIndex: this.selectedDayIndex,
             options: this.dayOptions,
             label: 'Day',
-            onClick: (index) => this.selectedDayIndex = index,
+            onClick: (index) => this.selectedDayIndex = index
           })
           Blank(100)
         }

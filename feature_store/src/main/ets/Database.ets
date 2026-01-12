@@ -45,7 +45,7 @@ export class Database {
         .equalTo('id', id)
         .limitAs(1);
       const resultSet = await this._store.query(predicate, BABY_TABLE.columns);
-      if (!resultSet || resultSet.rowCount == 0) {
+      if (!resultSet || resultSet.rowCount === 0) {
         return null;
       }
       let iBaby: IBaby | null = null;
@@ -57,7 +57,7 @@ export class Database {
           id: resultSet.getLong(resultSet.getColumnIndex('id')),
           name: resultSet.getString(resultSet.getColumnIndex('name')),
           dateOfBirth,
-          image: resultSet.getString(resultSet.getColumnIndex('image')),
+          image: resultSet.getString(resultSet.getColumnIndex('image'))
         };
       }
       resultSet.close()
@@ -73,7 +73,7 @@ export class Database {
     predicates.orderByDesc('id');
     try {
       const resultSet = await this._store.query(predicates, BABY_TABLE.columns);
-      if (!resultSet || resultSet.rowCount == 0) {
+      if (!resultSet || resultSet.rowCount === 0) {
         return [];
       }
 
@@ -91,7 +91,7 @@ export class Database {
           id,
           name,
           dateOfBirth,
-          image,
+          image
         };
         results.push(baby);
       }
@@ -115,7 +115,7 @@ export class Database {
 
     try {
       const resultSet = await this._store.query(predicates, DIAPER_TABLE.columns);
-      if (!resultSet || resultSet.rowCount == 0) {
+      if (!resultSet || resultSet.rowCount === 0) {
         return [];
       }
 
@@ -152,7 +152,7 @@ export class Database {
     const valueBucket: relationalStore.ValuesBucket = {
       name,
       'date_of_birth': dateOfBirth.getTime(),
-      image,
+      image
     }
     try {
       const babyId = await this._store.insert(BABY_TABLE.tableName, valueBucket);
@@ -175,7 +175,7 @@ export class Database {
       const valueBucket: relationalStore.ValuesBucket = {
         'baby_id': babyId,
         'timestamp': Date.now(),
-        type,
+        type
       }
       const diaperId = await this._store.insert(DIAPER_TABLE.tableName, valueBucket);
       if (diaperId === -1) {
@@ -198,7 +198,7 @@ export class Database {
       id,
       name,
       'date_of_birth': dateOfBirth.getTime(),
-      image,
+      image
     }
 
     try {
@@ -224,7 +224,7 @@ export class Database {
       id,
       'baby_id': babyId,
       'timestamp': Date.now(),
-      type,
+      type
     }
 
     try {

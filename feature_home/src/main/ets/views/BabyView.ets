@@ -1,22 +1,11 @@
 import { SizeConstants } from '../lib/SizeConstants';
 import { Baby } from '../models/Baby';
-import { Diaper } from '../models/Diaper';
-import DiaperViewModel from '../viewmodels/DiaperViewModel';
 import { DiaperView } from './DiaperView';
 
 @Component
 export struct BabyView {
   @Consume('pageStack') pageStack: NavPathStack;
-  private viewModel: DiaperViewModel = new DiaperViewModel();
   @Prop @Require baby: Baby;
-  @State diaper: Diaper | null = null;
-
-  aboutToAppear(): void {
-    this
-      .viewModel
-      .loadLatestDiaper(this.baby.id)
-      .then((diaper) => this.diaper = diaper)
-  }
 
   build() {
     Column() {

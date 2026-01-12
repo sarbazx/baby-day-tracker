@@ -61,7 +61,7 @@ export struct HomeView {
           this.pageStack.pushPathByName('AddBabyPage', null, () => {
             this.viewModel.loadBabies();
           });
-        },
+        }
       })
     } catch (err) {
       console.error(`[BabyDayTracker] requestEnableNotification failed, code is ${err.code}, message is ${err.message}`);
@@ -111,7 +111,7 @@ export struct HomeView {
                       this.viewModel.deleteBaby(baby);
                     })
                   },
-                  actionAreaDistance: 56,
+                  actionAreaDistance: 56
                 }
               })
             },
@@ -142,4 +142,3 @@ export struct HomeView {
 
   }
 }
-

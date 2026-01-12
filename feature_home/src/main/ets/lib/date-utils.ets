@@ -8,8 +8,11 @@ export function formatTimestamp(timestamp: number) {
   const hours = Math.floor((timestamp % MS_PER_DAY) / MS_PER_HOUR);
   const minutes = Math.floor((timestamp % MS_PER_HOUR) / MS_PER_MINUTE);
 
-  return `${days > 0 ? `${days} days` : ''}${hours > 0 ? `${hours} hours` : ''}${minutes > 0 ? `${minutes} minutes` :
-    ''}`
+  const daysStr = days > 0 ? `${days} days` : '';
+  const hoursStr = hours > 0 ? `${hours} hours` : '';
+  const minutesStr = minutes > 0 ? `${minutes} minutes` : '';
+
+  return `${daysStr} ${hoursStr} ${minutesStr}`
 }
 
 export function getMonthNames() {
@@ -65,7 +68,7 @@ export const formatDate = (date: Date): string => {
     month: 'short',
     hour: 'numeric',
     minute: '2-digit',
-    hour12: false,
+    hour12: false
   }
   const formatter = new Intl.DateTimeFormat('en-GB', options);
   return formatter.format(date).replace(',', '');
