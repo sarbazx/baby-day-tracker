@@ -9,29 +9,11 @@ export struct BabyView {
 
   build() {
     Column() {
-      Row({ space: 10 }) {
-        Image(this.baby.image)
-          .width($r('app.float.icon_bigger_size'))
-          .height($r('app.float.icon_bigger_size'))
-        Text(this.baby.name)
-          .fontColor(Color.White)
-          .fontWeight(FontWeight.Bold)
-          .textAlign(TextAlign.Center)
-          .fontSize($r('app.float.label_font_size_2'))
-      }
-      .justifyContent(FlexAlign.Center)
-      .alignItems(VerticalAlign.Center)
-      .margin({ bottom: 14 })
-      .width(SizeConstants.FULL_PERCENT)
-      .borderRadius(8)
-      .padding('8vp')
-      .backgroundColor($r('app.color.background_color'))
-
-      DiaperView({ babyId: this.baby.id })
+      DiaperView({ baby: this.baby })
     }
     .justifyContent(FlexAlign.Center)
     .alignItems(HorizontalAlign.Start)
-    .width('90%')
-    .height('100%')
+    .width(SizeConstants.FULL_PERCENT)
+    .height(SizeConstants.FULL_PERCENT)
   }
 }

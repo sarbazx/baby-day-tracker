@@ -31,22 +31,13 @@ export default class DiaperViewModel {
     return false;
   }
 
-  async loadLatestDiaper(id: number): Promise<Diaper | null> {
-    const babyId = parseInt(`${id}`);
-    const iDiapers = await this.appDatabase?.getDiaperListByBabyId(babyId, true);
-    if (iDiapers && iDiapers.length > 0) {
-      const type = iDiapers[0].type === 'pee' ? DiaperType.pee : DiaperType.poo;
-      return new Diaper(iDiapers[0].babyId, type, iDiapers[0].id, iDiapers[0].timestamp)
-    }
-    return null;
-  }
-
-  async loadDiapers(id: number): Promise<Diaper[]> {
+  async loadDiapers(id: number) {
     const babyId = parseInt(`${id}`);
     const iDiapers = await this.appDatabase?.getDiaperListByBabyId(babyId);
-    return (iDiapers ?? []).map((diaper) => {
+    (iDiapers ?? []).forEach((diaper) => {
       const type = diaper.type === 'pee' ? DiaperType.pee : DiaperType.poo;
-      return new Diaper(diaper.babyId, type, diaper.id, diaper.timestamp);
+      const iDiaper = new Diaper(diaper.babyId, type, diaper.id, diaper.timestamp);
+      this.datasource.pushData(iDiaper);
     });
   }
 }
