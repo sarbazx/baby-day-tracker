@@ -16,9 +16,6 @@ import BabyViewModel from '../viewmodels/BabyViewModel';
 @Component
 export struct AddBabyView {
   @Consume('pageStack') pageStack: NavPathStack;
-  private scroller: Scroller = new Scroller();
-  private controller: TextInputController = new TextInputController();
-  private options: ArcButtonOptions = new ArcButtonOptions({});
   @State viewModel: BabyViewModel = new BabyViewModel();
   @State babyName: string = ''
   @State yearOptions: SelectOption[] = []
@@ -28,6 +25,9 @@ export struct AddBabyView {
   @State dayOptions: SelectOption[] = [];
   @State selectedDayIndex: number = -1;
   @State selectedBabyGender: GenderType = GenderType.girl;
+  private scroller: Scroller = new Scroller();
+  private controller: TextInputController = new TextInputController();
+  private options: ArcButtonOptions = new ArcButtonOptions({});
 
   arcButtonInit() {
     try {
@@ -93,10 +93,13 @@ export struct AddBabyView {
             }
           })
 
-          TextInput({ text: this.babyName!!, placeholder: 'Baby Name', controller: this.controller })
+          TextInput({ text: this.babyName, placeholder: 'Baby Name', controller: this.controller })
             .width(SizeConstants.FULL_PERCENT)
             .inputFilter('[a-zA-Z]', (e) => {
               console.info(JSON.stringify(e));
+            })
+            .onChange((value: string) => {
+              this.babyName = value;
             })
             .margin({ bottom: 10 })
           Text('Baby Birth Date:')

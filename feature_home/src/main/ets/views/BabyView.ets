@@ -1,6 +1,8 @@
+import { EDIT_BABY_PAGE, HISTORY_PAGE, INSIGHTS_PAGE } from '../../../../Index';
 import { SizeConstants } from '../lib/SizeConstants';
 import { Baby } from '../models/Baby';
 import { DiaperView } from './DiaperView';
+import { AppPreferencesService, ReminderService } from 'feature_store';
 
 @Component
 export struct BabyView {
@@ -9,9 +11,11 @@ export struct BabyView {
 
   build() {
     Column() {
+
+
       DiaperView({ baby: this.baby })
     }
-    .justifyContent(FlexAlign.Center)
+    .justifyContent(FlexAlign.Start)
     .alignItems(HorizontalAlign.Start)
     .width(SizeConstants.FULL_PERCENT)
     .height(SizeConstants.FULL_PERCENT)
