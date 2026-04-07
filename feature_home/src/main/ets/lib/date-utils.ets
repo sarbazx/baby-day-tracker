@@ -73,3 +73,33 @@ export const formatDate = (date: Date): string => {
   const formatter = new Intl.DateTimeFormat('en-GB', options);
   return formatter.format(date).replace(',', '');
 }
+
+export function formatElapsedTime(timestamp: Date | undefined): string {
+  if (!timestamp) {
+    return 'Never';
+  }
+  const diff = Date.now() - timestamp.getTime();
+  const minutes = Math.floor(diff / (1000 * 60));
+  const hours = Math.floor(diff / (1000 * 60 * 60));
+
+  if (minutes < 1) {
+    return 'Just now';
+  }
+  if (minutes < 60) {
+    return `${minutes}m ago`;
+  }
+  if (hours < 24) {
+    return `${hours}h ago`;
+  }
+  const days = Math.floor(hours / 24);
+  return `${days}d ago`;
+}
+
+export function isOverdue(timestamp: Date | undefined, thresholdHours: number = 4): boolean {
+  if (!timestamp) {
+    return true;
+  }
+  const diff = Date.now() - timestamp.getTime();
+  const hours = diff / (1000 * 60 * 60);
+  return hours >= thresholdHours;
+}
