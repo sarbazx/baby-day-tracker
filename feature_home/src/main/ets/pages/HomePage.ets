@@ -9,7 +9,6 @@ export struct HomePage {
       }
       .height('100%')
       .width('100%')
-    }
-    .hideBackButton(true)
+    }.hideBackButton(true)
   }
 }
