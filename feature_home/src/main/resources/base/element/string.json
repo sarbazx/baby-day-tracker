@@ -7,6 +7,238 @@
     {
       "name": "empty_babies_message",
       "value": "No babies added"
+    },
+    {
+      "name": "onboarding_title_1",
+      "value": "Track Every Change"
+    },
+    {
+      "name": "onboarding_subtitle_1",
+      "value": "Log diaper changes quickly with just a tap"
+    },
+    {
+      "name": "onboarding_title_2",
+      "value": "See Trends & Insights"
+    },
+    {
+      "name": "onboarding_subtitle_2",
+      "value": "Monitor patterns and get overdue alerts"
+    },
+    {
+      "name": "onboarding_title_3",
+      "value": "Stay on Top of Care"
+    },
+    {
+      "name": "onboarding_subtitle_3",
+      "value": "Set reminders so nothing gets missed"
+    },
+    {
+      "name": "onboarding_get_started",
+      "value": "Get Started"
+    },
+    {
+      "name": "empty_babies_title",
+      "value": "No babies yet"
+    },
+    {
+      "name": "empty_babies_subtitle",
+      "value": "Add your first baby to start tracking diaper changes"
+    },
+    {
+      "name": "home_header_babies",
+      "value": "Babies"
+    },
+    {
+      "name": "home_header_today",
+      "value": "Today"
+    },
+    {
+      "name": "home_header_overdue",
+      "value": "Overdue"
+    },
+    {
+      "name": "sort_recent",
+      "value": "Recent"
+    },
+    {
+      "name": "sort_overdue",
+      "value": "Overdue"
+    },
+    {
+      "name": "sort_az",
+      "value": "A-Z"
+    },
+    {
+      "name": "settings_section_display",
+      "value": "Display"
+    },
+    {
+      "name": "settings_show_archived",
+      "value": "Show archived"
+    },
+    {
+      "name": "settings_sort_order",
+      "value": "Sort order"
+    },
+    {
+      "name": "settings_section_history",
+      "value": "History"
+    },
+    {
+      "name": "settings_default_period",
+      "value": "Default period"
+    },
+    {
+      "name": "settings_period_7d",
+      "value": "7D"
+    },
+    {
+      "name": "settings_period_30d",
+      "value": "30D"
+    },
+    {
+      "name": "settings_period_90d",
+      "value": "90D"
+    },
+    {
+      "name": "settings_section_reminders",
+      "value": "Reminders"
+    },
+    {
+      "name": "settings_enable_reminders",
+      "value": "Enable reminders"
+    },
+    {
+      "name": "settings_section_data",
+      "value": "Data"
+    },
+    {
+      "name": "settings_export_backup",
+      "value": "Export backup"
+    },
+    {
+      "name": "settings_section_about",
+      "value": "About"
+    },
+    {
+      "name": "settings_reset_onboarding",
+      "value": "Reset onboarding"
+    },
+    {
+      "name": "settings_version",
+      "value": "Baby Day Tracker v1.0"
+    },
+    {
+      "name": "baby_action_insights",
+      "value": "Insights"
+    },
+    {
+      "name": "baby_action_history",
+      "value": "History"
+    },
+    {
+      "name": "baby_action_remind",
+      "value": "Remind"
+    },
+    {
+      "name": "baby_action_edit",
+      "value": "Edit"
+    },
+    {
+      "name": "insights_today",
+      "value": "Today"
+    },
+    {
+      "name": "insights_this_week",
+      "value": "This Week"
+    },
+    {
+      "name": "insights_no_data",
+      "value": "No data"
+    },
+    {
+      "name": "insights_vs_last_week",
+      "value": "vs Last Week"
+    },
+    {
+      "name": "insights_trend",
+      "value": "7-Day Trend"
+    },
+    {
+      "name": "reminder_title",
+      "value": "Diaper Check"
+    },
+    {
+      "name": "history_today",
+      "value": "Today"
+    },
+    {
+      "name": "history_7d",
+      "value": "7D"
+    },
+    {
+      "name": "history_30d",
+      "value": "30D"
+    },
+    {
+      "name": "history_all",
+      "value": "All"
+    },
+    {
+      "name": "history_filter_all",
+      "value": "All"
+    },
+    {
+      "name": "history_filter_pee",
+      "value": "Pee"
+    },
+    {
+      "name": "history_filter_poo",
+      "value": "Poo"
+    },
+    {
+      "name": "diaper_intensity_light",
+      "value": "Light"
+    },
+    {
+      "name": "diaper_intensity_normal",
+      "value": "Normal"
+    },
+    {
+      "name": "diaper_intensity_heavy",
+      "value": "Heavy"
+    },
+    {
+      "name": "diaper_condition_good",
+      "value": "Good"
+    },
+    {
+      "name": "diaper_condition_rash",
+      "value": "Rash"
+    },
+    {
+      "name": "button_add_baby",
+      "value": "Add Baby"
+    },
+    {
+      "name": "button_save",
+      "value": "Save"
+    },
+    {
+      "name": "button_cancel",
+      "value": "Cancel"
+    },
+    {
+      "name": "button_delete",
+      "value": "Delete"
+    },
+    {
+      "name": "loading",
+      "value": "Loading..."
+    },
+    {
+      "name": "error_not_found",
+      "value": "Not found"
     }
   ]
 }
