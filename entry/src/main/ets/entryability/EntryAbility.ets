@@ -1,7 +1,7 @@
 import { AbilityConstant, ConfigurationConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { window } from '@kit.ArkUI';
-import { Database, GlobalContext } from 'feature_store';
+import { AppPreferencesService, Database, GlobalContext } from 'feature_store';
 
 const DOMAIN = 0x0000;
 
@@ -11,6 +11,9 @@ export default class EntryAbility extends UIAbility {
       this.context.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_NOT_SET);
       Database.getInstance(this.context).then((database) => {
         database.init();
+      });
+      AppPreferencesService.getInstance(this.context).catch((err: Error) => {
+        hilog.error(DOMAIN, 'testTag', 'Failed to init preferences. Cause: %{public}s', JSON.stringify(err));
       });
     } catch (err) {
       hilog.error(DOMAIN, 'testTag', 'Failed to set colorMode. Cause: %{public}s', JSON.stringify(err));
@@ -39,7 +42,7 @@ export default class EntryAbility extends UIAbility {
 
   onWindowStageDestroy(): void {
     // Main window is destroyed, release UI related resources
-    hilog.info(DOMAIN, 'testTag', '%{public}s', 'Ability onWindowStageDestroy');
+    hilog.info(DOMAIN, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
   }
 
   onForeground(): void {

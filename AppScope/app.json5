@@ -1,6 +1,6 @@
 {
   "app": {
-    "bundleName": "com.hmosdemos.wearable.babydaytracker",
+    "bundleName": "com.hmosdemos.wearable.baby_day_tracker",
     "vendor": "hmosdemos",
     "versionCode": 1000000,
     "versionName": "1.0.0",

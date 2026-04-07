@@ -1,6 +1,26 @@
 import { SPLASH_PAGE, SplashPage } from 'feature_splash';
-import { BABY_PAGE, BabyPage, HOME_PAGE, HomePage, ADD_BABY_PAGE, AddBabyPage, ADD_BABY_LOG_PAGE,
-  AddBabyLogPage } from 'feature_home';
+import {
+  ADD_BABY_LOG_PAGE,
+  ADD_BABY_PAGE,
+  AddBabyLogPage,
+  AddBabyPage,
+  BABY_PAGE,
+  BabyPage,
+  DIAPER_DETAIL_PAGE,
+  DiaperDetailPage,
+  EDIT_BABY_PAGE,
+  EditBabyPage,
+  HISTORY_PAGE,
+  HistoryPage,
+  HOME_PAGE,
+  HomePage,
+  INSIGHTS_PAGE,
+  InsightsPage,
+  ONBOARDING_PAGE,
+  OnboardingPage,
+  SETTINGS_PAGE,
+  SettingsPage
+} from 'feature_home';
 
 @Entry
 @Component
@@ -19,6 +39,18 @@ struct Index {
       AddBabyPage()
     } else if (builderName === ADD_BABY_LOG_PAGE) {
       AddBabyLogPage()
+    } else if (builderName === EDIT_BABY_PAGE) {
+      EditBabyPage()
+    } else if (builderName === HISTORY_PAGE) {
+      HistoryPage()
+    } else if (builderName === INSIGHTS_PAGE) {
+      InsightsPage()
+    } else if (builderName === SETTINGS_PAGE) {
+      SettingsPage()
+    } else if (builderName === ONBOARDING_PAGE) {
+      OnboardingPage()
+    } else if (builderName === DIAPER_DETAIL_PAGE) {
+      DiaperDetailPage()
     }
   }
 
