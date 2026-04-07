@@ -3,6 +3,9 @@ export interface IBaby {
   name: string;
   dateOfBirth: Date;
   image: string;
+  gender?: string;
+  isArchived?: boolean;
+  archivedAt?: Date;
 }
 
 export interface IDiaper {
@@ -10,4 +13,8 @@ export interface IDiaper {
   babyId: number;
   type: string;
   timestamp: Date;
+  note?: string;
+  intensity?: string;
+  condition?: string;
+  manualTimestamp?: Date;
 }
